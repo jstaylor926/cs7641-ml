@@ -1,0 +1,69 @@
+# CS 7641: Machine Learning (Georgia Tech / OMSCS)
+# Conda environment covering all four units: SL, OL, UL, RL.
+#
+# Create:   conda env create -f environment.yml      (or: mamba env create -f environment.yml)
+# Activate: conda activate cs7641
+# Update:   conda env update -f environment.yml --prune
+#
+# Python 3.11 is chosen for broad compatibility across PyTorch, the
+# gradient-boosting libraries, and the RL stack.
+
+name: cs7641
+
+channels:
+  - conda-forge
+
+dependencies:
+  # ---- Core language / build ----
+  - python=3.11
+  - pip
+
+  # ---- Numerical & data wrangling ----
+  - numpy
+  - scipy
+  - pandas
+  - polars                     # fast dataframe alternative
+
+  # ---- Core ML (SL / UL workhorses) ----
+  - scikit-learn               # pipelines, CV, calibration, metrics
+  - imbalanced-learn           # resampling / class-weight tools
+  - xgboost                    # gradient-boosted trees
+  - lightgbm                   # gradient-boosted trees
+  - catboost                   # gradient-boosted trees
+
+  # ---- Deep learning (Neural Networks - SL3) ----
+  - pytorch                    # MLPs on tabular data
+  - torchvision
+  - lightning                  # cleaner training loops (PyTorch Lightning)
+
+  # ---- Optimization & hyperparameter tuning (OL) ----
+  - optuna                     # hyperparameter search with pruning
+  - scikit-optimize            # simple Bayesian optimization
+
+  # ---- Interpretability / diagnostics / calibration ----
+  - shap                       # tabular feature attributions
+  - eli5                       # quick model inspection
+  - lime                       # local explanations
+
+  # ---- Reinforcement Learning (RL) ----
+  - gymnasium                  # RL environments (maintained Gym fork)
+  - stable-baselines3          # DQN, PPO, A2C baselines
+
+  # ---- Visualization ----
+  - matplotlib
+  - seaborn
+  - plotly
+  - altair
+
+  # ---- Notebooks / IDE integration ----
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+
+  # ---- Utilities ----
+  - tqdm
+  - joblib
+
+  # ---- pip-only packages ----
+  - pip:
+      - pymdptoolbox           # value/policy iteration for finite MDPs (RL1)

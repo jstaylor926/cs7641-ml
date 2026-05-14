@@ -1,0 +1,56 @@
+# CS 7641: Machine Learning (Georgia Tech / OMSCS)
+# pip fallback if you are not using conda. Prefer the conda environment.yml.
+#
+#   python3.11 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Versions are left unpinned to resolve cleanly across platforms (macOS/Linux).
+# If you need a fully reproducible lock, run: pip freeze > requirements.lock.txt
+
+# ---- Numerical & data wrangling ----
+numpy
+scipy
+pandas
+polars
+
+# ---- Core ML (SL / UL workhorses) ----
+scikit-learn
+imbalanced-learn
+xgboost
+lightgbm
+catboost
+
+# ---- Deep learning (Neural Networks - SL3) ----
+torch
+torchvision
+lightning
+
+# ---- Optimization & hyperparameter tuning (OL) ----
+optuna
+scikit-optimize
+
+# ---- Interpretability / diagnostics / calibration ----
+shap
+eli5
+lime
+
+# ---- Reinforcement Learning (RL) ----
+gymnasium
+stable-baselines3
+pymdptoolbox
+
+# ---- Visualization ----
+matplotlib
+seaborn
+plotly
+altair
+
+# ---- Notebooks / IDE integration ----
+jupyterlab
+ipykernel
+ipywidgets
+
+# ---- Utilities ----
+tqdm
+joblib
