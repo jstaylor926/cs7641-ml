@@ -1,0 +1,32 @@
+Well-posed Learning Problems
+
+A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its peformance at tasks in T, as measured by P, improves with experience E.
+
+ Choosing the Training experience
+
+ - The type of feedback: Whether the training experience provides direct or indirect feedback on the system's choices.
+ - The degree of control: How much the learner controls the sequence of training examples it receives
+ - The representativeness: How well the training examples represent the actual distribution of problems the system will when its final performance is evaluated.
+
+
+ Choosing the Target Function
+
+ First: Choose the type of training experience from which our system will learn.
+ Direct vs indirectSecond: The degree to which the learner controls the sequence of training examples.
+Second: Degree to which the learner controls the sequence of training examples.
+ Third: How well it is represents the distribution of examples over which the final system performance P must be measured.
+
+ Choosing a Representation for the Target Function
+
+ Choosing a representation that the learning program will use to describe the function V that it will learn.
+
+ x1: # of black pieces on the board
+ x2: # of red pieces on the board
+ x3: # of black kings
+ x4: # of red kings
+
+x5: the number of black pieces threadened by red
+x6: the number of red pieces threadtened by black
+
+Choosing a Function Approximation Algorithm
+
